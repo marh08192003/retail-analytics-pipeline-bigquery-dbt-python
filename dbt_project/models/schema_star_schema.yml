@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_cliente
+    columns:
+      - name: sk_cliente
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_producto
+    columns:
+      - name: sk_producto
+        data_tests:
+          - not_null
+          - unique
+
+  - name: fact_ventas
+    columns:
+      - name: sk_venta
+        data_tests:
+          - not_null
+          - unique
+      - name: fk_cliente
+        data_tests:
+          - not_null
